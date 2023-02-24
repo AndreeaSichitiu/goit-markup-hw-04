@@ -131,7 +131,7 @@ header li a {
       rgba(0, 0, 0, 0.5),
       rgba(47, 48, 58, 0.2)
     ),
-    url(/images/background-picture.jpg);
+    url(./images/background-picture.jpg);
   background-size: contain;
   height: 600px;
   text-align: center;
