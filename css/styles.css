@@ -20,11 +20,11 @@ body {
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-left: 0;
 }
 
 .unstyled-list {
   list-style: none;
+  padding-left: 0;
 }
 
 .link:hover,
@@ -34,10 +34,8 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  width: 1200px;
   margin: 0 auto;
-  width: 1600px;
 }
 
 /*HeaderSection*/
@@ -46,8 +44,6 @@ body {
 }
 
 .header-content {
-  width: 1200px;
-  margin: 0 auto;
   display: flex;
 }
 
@@ -71,8 +67,7 @@ header .link {
 .header-navigation-item,
 .header-contact,
 .header-navigation,
-.logo,
-.about-section-list {
+.logo {
   display: flex;
 }
 
@@ -125,13 +120,16 @@ header li a {
 
 /*MainSection*/
 .main-section {
-  background: rgba(47, 48, 58, 0.4);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 48, 58, 0.2)),
     url(../images/office.jpg);
-  background-size: contain;
   height: 600px;
+  width:1600px;
+  margin:0 auto; 
+}
+
+.main-content {
   text-align: center;
-  padding-top: 215px;
+  padding-top: 200px;
 }
 
 .main-section-title {
@@ -141,7 +139,7 @@ header li a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .request-button {
@@ -153,31 +151,15 @@ header li a {
   background: var(--blue-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  padding: 10px 19px 10px 20px;
   border: none;
+  padding: 10px 19px 10px 20px;
 }
 
 /*AboutSection*/
 .about-section {
-  padding: 94px 215px;
-}
-
-.about-work-section {
-  padding: 0 215px 94px;
-}
-
-.about-section-cards {
-  background: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
+  padding: 94px 0;
   display: flex;
-  justify-content: center;
-  width: 270px;
-  height: 120px;
-}
-
-.about-section-cards svg {
-  margin-top: 25px;
+  justify-content: space-between;
 }
 
 .about-title {
@@ -196,10 +178,29 @@ header li a {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--main-grey-color);
-  text-align: left;
-  margin-right: 30px;
-  width: 270px;
 }
+
+.about-section-list {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section-cards {
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+}
+
+.about-section-cards svg {
+  margin-top: 25px;
+}
+
+/*AboutWorkSection*/
 
 .about-work-title {
   font-weight: 700;
@@ -211,16 +212,13 @@ header li a {
   padding-bottom: 50px;
 }
 
-/*OurTeamSection*/
-.images-studio,
-.images-our-team {
+.images-studio {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  padding-bottom: 94px;
 }
 
-.images-our-team {
-  padding: 0 215px;
-}
+/*OurTeamSection*/
 
 .images-our-team > li {
   background: var(--white-color);
@@ -231,7 +229,8 @@ header li a {
 
 .our-team-section {
   background-color: var(--light-grey-color);
-  height: 708px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .our-team-title {
@@ -242,6 +241,12 @@ header li a {
   letter-spacing: 0.03em;
   color: var(--main-color);
   padding-bottom: 50px;
+}
+
+.images-our-team {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
 }
 
 .our-team {
@@ -261,13 +266,7 @@ header li a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-grey-color);
-  padding-bottom: 12px;
-}
-
-.our-team-section {
-  margin: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 16px;
 }
 
 .team-social-icons {
@@ -315,9 +314,8 @@ header li a {
 
 .customer-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 94px;
-  gap: 30px;
 }
 
 .customer-logo {
@@ -333,7 +331,6 @@ header li a {
   border: 1px solid var(--media-fill-color);
   border-radius: 4px;
   padding: 16px 32px;
-  gap: 30px;
 }
 
 .customer-icons {
@@ -387,14 +384,10 @@ header li a {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  padding: 0 215px 94px;
-}
-
-.card {
-  width: 370px;
-  height: 404px;
-  background: var(--white-color);
-  border: 1px solid #eeeeee;
+  padding-bottom: 94px;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .card:hover {
@@ -402,7 +395,14 @@ header li a {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.card {
+  width: 370px;
+  height: 404px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
 
 .project-card li img {
@@ -428,12 +428,29 @@ header li a {
 }
 
 /*FooterSection*/
+
+footer {
+  background-color: var(--main-backgroud);
+  height: 251px;
+}
+
+.footer-content {
+  padding-top: 60px;
+  display: flex;
+  gap: 94px;
+}
+
+.footer-adress {
+  gap: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
 address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  padding-bottom: 60px;
 }
 
 .contact {
@@ -448,31 +465,20 @@ address {
   line-height: 1.87;
 }
 
-footer {
-  background-color: var(--main-backgroud);
-  height: 251px;
-  padding: 60px 215px;
-}
-
 .footer-logo-second-word {
   color: var(--white-color);
+}
+
+.footer-media {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
 }
 
 .media-icons-list {
   display: flex;
   gap: 10px;
-}
-
-.footer-section {
-  display: flex;
-  gap: 94px;
-}
-
-.media-footer-section {
-  display: flex;
-  flex-direction: column;
-  align-self: baseline;
-  gap: 20px;
 }
 
 .media-title {
